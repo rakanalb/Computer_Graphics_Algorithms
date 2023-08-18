@@ -1,10 +1,8 @@
-# This program applies the Digital Differential Analyzer Algorithm used in computer graphic rasterization.
-# It takes 4 inputs and outputs a DDA Table consistent of all the points to be drawn on the screen.
-# Author: Rakan Albadeen
-# Date: 12/8/2023
-
 import pandas as pd
+import matplotlib.pyplot as plt
 
+# This program applies the Digital Differential Analyzer Algorithm used in computer graphic rasterization.
+# It takes 4 inputs and outputs a DDA Table consistent of all the points to be drawn on the screen, and draws them.
 x1, y1 = input("What is your start point? (In the form: x,y): ").split(",")
 x2, y2 = input("What is your end point? (In the form: x,y): ").split(",")
 print("Thanks! Your line goes from (" + x1 + "," + y1 + ") to (" + x2 + "," + y2 + ").")
@@ -16,6 +14,7 @@ y2 = int(y2)
 
 deltax = x2 - x1
 deltay = y2 - y1
+slope = deltay/deltax
 
 if deltay > deltax:
     steps = deltay
@@ -39,7 +38,7 @@ while i < steps:
     xlist.append(xlist[-1] + dx)
     ylist.append(ylist[-1] + dy)
     i += 1
-    
+
 xrounded = []
 yrounded = []
 newxlist = []
@@ -58,3 +57,13 @@ df = pd.DataFrame(allvalues)
 
 print("Your DDA Table:")
 print(df)
+
+xplot = xrounded
+yplot = yrounded
+offset = 1
+plt.grid()
+plt.locator_params(axis="both", integer=True,)
+plt.xlim([min(xplot)-offset,max(xplot)+offset])
+plt.ylim([min(yplot)-offset,max(yplot)+offset])
+plt.plot(xplot, yplot)
+plt.show()
