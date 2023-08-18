@@ -1,4 +1,4 @@
-# Computer_Graphics_Algorithms
+# Computer Graphics Algorithms
 # **Digital Differential Analyzer (DDA) Calculator**
 **Plug in your points and let the program do the rest.**
 Please ensure you input your start & end points as nothing other than "x,y".
@@ -12,3 +12,4 @@ Please ensure you input your start & end points as nothing other than "x,y".
 * dy
 * All x & y increments
 # The output will be a full Digital Differential Analyzer Table with all pixel points found.
+# The program will also plot your created line.
