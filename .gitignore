@@ -1,2 +1,4 @@
 # ignore .DS_Store
 .DS_Store
+# ignore local DDA Notebook changing outputs
+ddalocal.ipynb
