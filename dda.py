@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # This program applies the Digital Differential Analyzer Algorithm used in computer graphic rasterization.
-# It takes 4 inputs and outputs a DDA Table consistent of all the points to be drawn on the screen, and draws them.
+# It takes 4 inputs and outputs a DDA Table consistent of all the points to be drawn on the screen, and plots them.
 x1, y1 = input("What is your start point? (In the form: x,y): ").split(",")
 x2, y2 = input("What is your end point? (In the form: x,y): ").split(",")
 print("Thanks! Your line goes from (" + x1 + "," + y1 + ") to (" + x2 + "," + y2 + ").")
